@@ -50,10 +50,10 @@ def extract_biofuel_shares_from_IAM(
 
             # get shares of synthetic fuel
             df_total = df.loc[df["Variable"] == "FE-Transport-Pass-Road-LDV-Liquids"]
-            df_total.index = df.loc[df["Variable"] == "SE-Liquids-Hydrogen"].index
+            df_total.index = df.loc[df["Variable"] == "FE-Transport-Liquids-Hydrogen"].index
             share = np.clip(
                 (
-                    df.loc[df["Variable"] == "SE-Liquids-Hydrogen", "2005":].divide(
+                    df.loc[df["Variable"] == "FE-Transport-Liquids-Hydrogen", "2005":].divide(
                         df_total.loc[:, "2005":], axis=0
                     )
                 ).values,
