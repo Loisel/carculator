@@ -23,9 +23,8 @@ __all__ = (
     "InternalNoiseModel",
     "create_fleet_composition_from_IAM_file",
     "extract_electricity_mix_from_IAM_file",
-    "extract_biofuel_shares_from_IAM"
 )
-__version__ = (1, 4, 7)
+__version__ = (1, 5, 1)
 
 from pathlib import Path
 
@@ -45,5 +44,4 @@ from .model import CarModel
 from .inventory import InventoryCalculation
 from .background_systems import BackgroundSystemModel
 from .export import ExportInventory
-from .utils import (create_fleet_composition_from_IAM_file, extract_electricity_mix_from_IAM_file,
-                    extract_biofuel_shares_from_IAM)
+from .utils import (create_fleet_composition_from_IAM_file, extract_electricity_mix_from_IAM_file,)

@@ -27,14 +27,14 @@ with open("README.md", "r") as fh:
 
 setup(
     name="carculator",
-    version="1.4.7",
+    version="1.5.1",
     packages=packages,
     author="Romain Sacchi <romain.sacchi@psi.ch>, Chris Mutel <christopher.mutel@psi.ch>",
     license=open("LICENSE").read(),
     package_data={"carculator": package_files(os.path.join("carculator", "data"))},
     install_requires=[
         "pandas",
-        "xarray",
+        "xarray<0.18",
         "numpy",
         "pytest",
         "pytest-cov",

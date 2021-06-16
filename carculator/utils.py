@@ -179,17 +179,6 @@ def extract_biofuel_shares_from_IAM(
         new_df.columns[:3].tolist() + new_df.columns[3:].astype(int).tolist()
     )
 
-    new_df = new_df.rename(columns={"Variable": "fuel_type"})
-    new_df = new_df.groupby("fuel_type").sum()
-
-    arr = (
-        new_df.to_xarray()
-        .to_array()
-        .interp(variable=years, kwargs={"fill_value": "extrapolate"})
-    )
-
-    arr = np.clip(arr, 0, 1)
-    return arr
 
 def get_iam_electricity_market_labels(model):
     """
