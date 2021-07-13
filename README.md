@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://badge.fury.io/py/carculator" target="_blank"><img src="https://badge.fury.io/py/carculator.svg"></a>
-  <a href="https://travis-ci.org/romainsacchi/carculator" target="_blank"><img src="https://travis-ci.org/romainsacchi/carculator.svg?branch=master"></a>
+  <a href="https://github.com/romainsacchi/carculator" target="_blank"><img src="https://github.com/romainsacchi/carculator/actions/workflows/main.yml/badge.svg?branch=master"></a>
   <a href="https://ci.appveyor.com/project/romainsacchi/carculator" target="_blank"><img src="https://ci.appveyor.com/api/projects/status/github/romainsacchi/carculator?svg=true"></a>
   <a href="https://coveralls.io/github/romainsacchi/carculator" target="_blank"><img src="https://coveralls.io/repos/github/romainsacchi/carculator/badge.svg"></a>
   <a href="https://carculator.readthedocs.io/en/latest/" target="_blank"><img src="https://readthedocs.org/projects/carculator/badge/?version=latest"></a>
@@ -27,8 +27,8 @@ See [the documentation](https://carculator.readthedocs.io/en/latest/index.html) 
   - [Why carculator](#why-carculator)
 - [Install](#install)
 - [Usage](#usage)
-    - [As a Python library](#as-a-python-library)
-    - [As a web app](#as-a-web-app)
+  - [As a Python library](#as-a-python-library)
+  - [As a web app](#as-a-web-app)
 - [Support](#support)
 - [Maintainers](#maintainers)
 - [Contributing](#contributing)
@@ -48,7 +48,7 @@ In the research field of mobility, LCA is widely used to investigate the superio
 
 ``carculator`` allows to:
 * produce [life cycle assessment (LCA)](https://en.wikipedia.org/wiki/Life-cycle_assessment) results that include conventional midpoint impact assessment indicators as well cost indicators
-* ``carculator`` uses time- and energy scenario-differentiated background inventories for the future, based on outputs of Integrated Asessment Model [REMIND](https://www.pik-potsdam.de/research/transformation-pathways/models/remind/remind). 
+*  ``carculator`` uses time- and energy scenario-differentiated background inventories for the future, based on outputs of Integrated Asessment Model [REMIND](https://www.pik-potsdam.de/research/transformation-pathways/models/remind/remind). 
 * calculate hot pollutant and noise emissions based on a specified driving cycle
 * produce error propagation analyzes (i.e., Monte Carlo) while preserving relations between inputs and outputs
 * control all the parameters sensitive to the foreground model (i.e., the vehicles) but also to the background model
@@ -74,7 +74,6 @@ We recommend the installation on **Python 3.7 or above**.
 ### Installation of a stable release (1.3.1) from Pypi
 
     pip install carculator
-    
 
 ## Usage
 
@@ -82,6 +81,7 @@ We recommend the installation on **Python 3.7 or above**.
 
 Calculate the fuel efficiency (or ``Tank to wheel`` energy requirement) in km/L of petrol-equivalent of current SUVs for the driving cycle WLTC 3.4
 over 800 Monte Carlo iterations:
+
 ```python
     from carculator import *
     import matplotlib.pyplot as plt

@@ -8,25 +8,25 @@ source:
 build:
   noarch: python
   number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: python -m pip install --no-deps --ignore-installed .
   script_env:
-   - VERSION
-   - CONDA_BLD_PATH
+    - VERSION
+    - CONDA_BLD_PATH
 
 requirements:
   build:
     - python
     - setuptools
   run:
-    - klausen
+    - scipy
+    - pyprind
     - pandas
-    - xarray<0.18
+    - xarray <0.18
     - numpy
-    - python
-    - xarray
+    - klausen
     - xlrd
     - numexpr
-    - bw2io>0.8
+    - bw2io
     - pycountry
     - wurst
 
@@ -37,5 +37,5 @@ test:
 about:
   home: https://github.com/romainsacchi/carculator
   license: BSD License
-  summary: 'A parameterized Python model to calculate the energy consumption and life cycle assessment of cars'
+  summary: 'Life Cycle Assessment for passenger cars.'
 license_family: BSD

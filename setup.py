@@ -1,5 +1,6 @@
-from setuptools import setup
 import os
+
+from setuptools import setup
 
 packages = []
 root_dir = os.path.dirname(__file__)
@@ -22,29 +23,28 @@ def package_files(directory):
         for filename in filenames:
             paths.append(os.path.join("..", path, filename))
     return paths
+
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
     name="carculator",
-    version="1.5.1",
+    version="1.5.2",
     packages=packages,
     author="Romain Sacchi <romain.sacchi@psi.ch>, Chris Mutel <christopher.mutel@psi.ch>",
     license=open("LICENSE").read(),
     package_data={"carculator": package_files(os.path.join("carculator", "data"))},
     install_requires=[
         "pandas",
-        "xarray<0.18",
+        "xarray <0.18",
         "numpy",
-        "pytest",
-        "pytest-cov",
         "klausen",
         "xlrd",
-        "pytest",
         "numexpr",
         "bw2io",
         "pycountry",
-        "wurst"
+        "wurst",
     ],
     url="https://github.com/romainsacchi/carculator",
     description="Prospective environmental and economic life cycle assessment of vehicles made blazing fast",
