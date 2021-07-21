@@ -439,7 +439,6 @@ class HotEmissionsModel:
             ).values
         )
 
-
         final_emissions.loc[
             dict(
                 component=heavy_metals,
